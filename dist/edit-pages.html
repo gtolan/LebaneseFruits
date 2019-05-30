@@ -1,0 +1,655 @@
+<!DOCTYPE html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lebanese Fruits</title>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="faviconsrc">
+
+    <link href="undefined" rel="preload" as="font">
+    <link href="undefined" rel="preload" as="font">
+    <link rel="stylesheet" type="text/css" href="/styles/above-fold-inline.css">
+    <link rel="icon" type="image/png" href="/images/icons/MDlogFavIco.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<">
+    <!-- iPad Retina-->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="faviconsrc<">
+    <!--iPhone Retina -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="faviconsrc<">
+    <!-- iPad 1 e 2 -->
+    <link rel="apple-touch-icon-precomposed" href="faviconsrc<">
+    <!-- iPhone, iPod e Android 2.2+ -->
+    <style id="edit">
+section#edit ul {
+    list-style: none;
+    padding: 0px;
+}
+section#edit ul li {
+    position: absolute;
+    background-color: white;
+    margin-top: 7.85rem;
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid lightgrey;
+    min-height: 20rem;
+}
+section#edit ul li.tab-panel {
+    display: none;
+}
+section#edit ul li.tab-panel.active {
+    display: block;
+}
+section#edit {
+    min-height: 32rem;
+    margin-top: 3.5rem;
+    font-family: Montserrat,sans-serif;
+}
+span.btn-group {
+    top: 9.5rem;
+    position: absolute;
+    z-index: 9;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    margin-left: calc(50vw - 200px);
+    text-align: center;
+}
+span.btn-group button.tab {
+    width: 24%;
+    padding: 1rem;
+    border-radius: 5px 5px 0px 0px;
+    background-color: dodgerblue;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+span.btn-group button.tab.active {
+
+    background-color: #105fad;
+
+}
+.collapse-btn {
+    width: 100%;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 1.42rem;
+    padding: 1rem;
+    border: 1px solid black;
+    text-shadow: 0px 0px 3px black;
+    color: white;
+    background-color: dodgerblue;
+}
+.collapse-btn h4{
+    margin: 0px;
+    display: inline-block;
+}
+.collapse-btn span {
+    float: right;
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    border: 1px solid white;
+    padding: 2px 6px 6px 4px;
+    border-radius: 3px;
+}
+input {
+    height: 2rem;
+    min-width: 17rem;
+    font-size: .8rem;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    padding-left: 9px;
+}
+textarea{
+    height: 5rem;
+    min-width: 17rem;
+    font-size: .8rem;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    padding-left: 9px;
+    resize: none;
+}
+.collapse {
+    height: auto;
+    visibility: visible;
+    transition: .4s ease-in-out;
+    padding: 1rem;
+}
+.hide-collapse {
+    height: 0;
+    visibility: hidden;
+}
+.image-sample {
+    height: 5rem;
+    width: 9rem;
+    vertical-align: middle;
+}
+.image-sample.fruit-veg {
+height: 9rem;
+    width: 9rem;
+    vertical-align: middle;
+}
+.left, .right {
+    width: calc(50% - 1rem);
+    display: inline-block;
+    vertical-align: top;
+}
+textarea {
+    display: block
+}
+button.replace-member {
+    display: inline-block;
+    width: 8.5rem;
+    padding: .5rem;
+    margin-top: .5rem;
+    background-color: darkblue;
+    color: white;
+    border-radius: 3px;
+}
+select {
+    height: 1.8rem;
+    width: 8.15rem;
+    border-radius: 1px;
+}
+    </style>
+
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" type="text/css" href="/styles/below-fold.css">
+        <!--<link rel="stylesheet" type="text/css" href="/styles/products.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="/styles/contact.css">-->
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 900px)">
+        <link rel="stylesheet" type="text/css" href="/styles/desktop.css" media="screen and (min-width: 900px)">
+    </noscript>
+
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Lebanese Fruit",
+        "url": "http://LebaneseFruits.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://LebaneseFruits.ie/search/{search_term}",
+            "query-input": "required name=search_term"
+        }
+    }
+    </script>
+
+    <script>
+
+        var loadDeferredStyles = function () {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function () {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+
+    <script defer src="/__/firebase/5.7.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132390266-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-XXXXXXX-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileImage" content="tileimgsrc">
+    <meta name="msapplication-TileColor" content="tilecolor">
+    <meta name="description" content="Lebanese Fruit - International Exporters">
+    <meta name="theme-color" content="#4285f4">
+</head>
+<body>
+<div id="navWatch"></div>
+<nav class="fixed-nav">
+
+    <button class="hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <ul class="options left desktop">
+
+        <li class="drop"><a href="about">About</a>
+            <ul class="dropdown-group">
+                <li class="drop-item"><a href="/our-company">Our Company</a></li>
+                <li class="drop-item"><a href="/our-team">Our Team</a></li>
+                <li class="drop-item"><a href="/retailers">Retailers</a></li>
+            </ul>
+        </li>
+        <li class="drop"><a href="products">Products</a>
+            <ul class="dropdown-group">
+                <li class="drop-item"><a href="/products/fruit">Fruit</a></li>
+                <li class="drop-item"><a href="/products/vegetables">Vegetables</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <a href="/home" class="logo" title="Strata3 Home" aria-label="Lebanese Fruit Home" id="logo">
+        <img src="/images/lebfruit.jpg">
+    </a>
+    <div class="options right desktop">
+
+        <div class="dropdown">
+            <a href="news" class="dropbtn">News
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+        </div>
+        <div class="dropdown">
+            <a href="contact" class="dropbtn">Contact
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+</nav>
+
+<section id="edit">
+    <span class="btn-group">
+        <button class="tab" data-target=".about-tab">About us</button>
+        <button class="tab" data-target=".products-tab">Product</button>
+        <button class="tab" data-target=".news-tab">News</button>
+        <button class="tab active" data-target=".contact-tab">Contact</button>
+    </span>
+<ul>
+<li class="about-tab tab-panel">
+<button class="collapse-btn" data-target=".collapse.one">
+<h4>Our Company</h4><span class="icon">&#8722;</span>
+</button>
+<div class="collapse one">
+        <div class="left">
+<label>
+    <p>Header Image:</p>
+    <input type=text placeholder="Enter image source">
+    <img src="../images/about.png" class='image-sample'>
+</label>
+<label>
+        <p>Header Circle Image:</p>
+        <input type=text placeholder="Enter image source">
+        <img src="/images/seeds.png" class=' image-sample'>
+    </label>
+<label>
+    <p>Our Company text:</p>
+    <textarea placeholder="Enter text"></textarea>
+</label>
+<label>
+    <p>Our Mission text:</p>
+    <textarea placeholder="Enter text"></textarea>
+</label>
+<label>
+    <p>Meet our Team section Image:</p>
+    <input type=text placeholder="Enter image source">
+    <img src="/images/ourTeamBG.png" class='image-sample'>
+</label>
+        </div>
+        <div class="right">
+
+
+        </div>
+</div>
+</div>
+<button class="collapse-btn" data-target=".collapse.two">
+<h4>Our Team</h4><span class="icon">&#43;</span>
+</button>
+<div class="collapse two">
+        <div class="left">
+        <label>
+                <p>Header Image:</p>
+                <input type=text placeholder="Enter image source">
+                <img src="/images/ourTeamBG.png" class='image-sample'>
+            </label>
+            <label>
+                    <p>Header Circle Image:</p>
+                    <input type=text placeholder="Enter image source">
+                    <img src="/images/teamcircle.png" class=' image-sample'>
+                </label>
+        <label>
+                <p>Profile Image:</p>
+                <input type=text placeholder="Enter image source">
+                <img src="/images/team/zuk.png" class=' image-sample'>
+            </label>
+            <label>
+                    <p>Member Name:</p>
+                    <input type=text placeholder="Enter name">
+                </label>
+                <label>
+                        <p>Member Position:</p>
+                        <input type=text placeholder="Enter Member position">
+                    </label>
+        <label>
+            <p>Member Bio:</p>
+            <textarea placeholder="Enter text"></textarea>
+        </label>
+        <button class="replace-member">Replace Member</button>
+        <select>
+            <option value="1">Position 1</option>
+            <option value="2">Position 2</option>
+            <option value="3">Position 3</option>
+        </select>
+
+        <label>
+                <p>Our Retails section Image:</p>
+                <input type=text placeholder="Enter image source">
+                <img src="/images/retailersBG.png" class='image-sample'>
+            </label>
+            </div>
+            <div class="right">
+              
+
+            </div>
+</div>
+</div>
+<button class="collapse-btn" data-target=".collapse.three">
+<h4>Retailers</h4><span class="icon">&#43;</span>
+</button>
+<div class="collapse three">
+    <div class="left">
+        <label>
+                <p>Header Image:</p>
+                <input type=text placeholder="Enter image source">
+                <img src="/images/retailersBG.png" class='image-sample'>
+            </label>
+            <label>
+                    <p>Header Circle Image:</p>
+                    <input type=text placeholder="Enter image source">
+                    <img src="/images/seeds.png" class='image-sample'>
+                </label>
+                <div class="icons">
+                    <h4>Retailer Icons</h4>
+
+                    <label>
+                            <p>Add Retailer Logo Image:</p>
+                            <input type=text placeholder="Enter logo source">
+                            <img src="/images/retailers/spar.jpg" class='image-sample'>
+                        </label>
+                </div>
+                <label>
+                        <p>Our Products section:</p>
+                        <input type=text placeholder="Enter image source">
+                        <img src="/images/vegetablesBG.png" class='image-sample'>
+                    </label>
+                </div>
+
+            <div class="right">
+                <h4>Current Retailers</h4>
+                <div class="current-retailers">
+
+                </div>
+            </div>
+
+</div>
+
+</li>
+<li class="products-tab tab-panel">
+
+        <button class="collapse-btn" data-target=".collapse.lebanese">
+        <h4>Lebanese Products</h4><span class="icon">&#43;</span>
+        </button>
+        <div class="collapse lebanese">
+                <div class="left">
+                    <label>
+                        <p>Add Fruit:</p>
+                        <input type=text placeholder="Enter fruit image source 300px X 300px">
+                        <img src="/images/products/fruits/straw-product.png" class='image-sample fruit-veg'>
+                    </label>
+                    <div class="availability">
+                    <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox">
+                    </div>
+                    <button class="add-fruit">Save Fruit</button>
+
+                    <label>
+                            <p>Add Vegetable:</p>
+                            <input type=text placeholder="Enter veg image source 300px X 300px">
+                            <img src="/images/products/vegetables/tomatoe.png" class=' image-sample fruit-veg'>
+                        </label>
+                        <div class="availability">
+                                <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox">
+                                </div>
+                                <button class="add-fruit">Save Veg</button>
+                
+                    </div>
+                    <div class="right">
+                      <h4>Current Fruit</h4>
+                      <h4>Current Veg</h4>
+        
+                    </div>
+        </div>
+
+
+        <button class="collapse-btn" data-target=".collapse.southaf">
+                <h4>South African Products</h4><span class="icon">&#43;</span>
+                </button>
+                <div class="collapse southaf">
+                        <div class="left">
+                            <label>
+                                <p>Add Fruit:</p>
+                                <input type=text placeholder="Enter fruit image source 300px X 300px">
+                                <img src="/images/products/fruits/straw-product.png" class='image-sample fruit-veg'>
+                            </label>
+                            <div class="availability">
+                            <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox">
+                            </div>
+                            <button class="add-fruit">Save Fruit</button>
+        
+                            <label>
+                                    <p>Add Vegetable:</p>
+                                    <input type=text placeholder="Enter veg image source 300px X 300px">
+                                    <img src="/images/products/vegetables/tomatoe.png" class=' image-sample fruit-veg'>
+                                </label>
+                                <div class="availability">
+                                        <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox">
+                                        </div>
+                                        <button class="add-fruit">Save Veg</button>
+                        
+                            </div>
+                            <div class="right">
+                              <h4>Current Fruit</h4>
+                              <h4>Current Veg</h4>
+                
+                            </div>
+                </div>
+
+
+                <button class="collapse-btn" data-target=".collapse.australian">
+                        <h4>Australian Products</h4><span class="icon">&#43;</span>
+                        </button>
+                        <div class="collapse australian">
+                                <div class="left">
+                                    <label>
+                                        <p>Add Fruit:</p>
+                                        <input type=text placeholder="Enter fruit image source 300px X 300px">
+                                        <img src="/images/products/fruits/straw-product.png" class='image-sample fruit veg'>
+                                    </label>
+                                    <div class="availability">
+                                    <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox">
+                                    </div>
+                                    <button class="add-fruit">Save Fruit</button>
+                
+                                    <label>
+                                            <p>Add Vegetable:</p>
+                                            <input type=text placeholder="Enter veg image source 300px X">
+                                            <img src="/images/products/vegetables/tomatoe.png" class=' image-sample fruit-veg'>
+                                        </label>
+                                        <div class="availability">
+                                                <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox"> <input type="checkbox">
+                                                </div>
+                                                <button class="add-fruit">Save Veg</button>
+                                
+                                    </div>
+                                    <div class="right">
+                                      <h4>Current Fruit</h4>
+                                      <h4>Current Veg</h4>
+                        
+                                    </div>
+                        </div>
+        
+
+
+</li>
+<li class="news-tab tab-panel">
+    <div class="left">
+        <label>
+                <p>Header Image:</p>
+            <input type="text" placeholder="Enter image source">
+            <img src="../images/news.jpg" class="image-sample">
+        </label>
+        <h4>Add News article</h4>
+        <label>
+        <p class="title">Article Title:</p>
+        <input type="text" placeholder="Enter image source">
+         </label>
+         <label>
+                <p class="title">Article Author:</p>
+                <input type="text" placeholder="Enter author name">
+                 </label>
+                 <label>
+                        <p class="title">Article date:</p>
+                        <input type="text" placeholder="Enter image source">
+                         </label>
+                         <label>
+                                <p class="title">Article duration time:</p>
+                                <input type="text" placeholder="Enter image source">
+                                 </label>
+                                 <label>
+                                        <p class="title">Add article text:</p>
+                                 <textarea placeholder="Enter text"></textarea>
+                                </label>
+                            </div>
+
+                                <div class="right">
+                                        <h4>Current Articles</h4>
+                                        
+                          
+                                      </div>
+
+
+</li>
+<li class="contact-tab tab-panel active">
+<label>
+        <p>Header Image:</p>
+    <input type="text" placeholder="Enter image source">
+    <img src="../images/roots.png" class="image-sample">
+</label>
+</li>
+</ul>
+
+</section>
+
+
+
+<footer>
+    <div class="contact">
+        <b>Contact</b>
+        <p>Address 1.</p>
+        <p>Street 2</p>
+        <p>City, Country</p>
+    </div>
+    <div class="number">
+        <p class="tel"><a href="">+35 1 671 8806</a></p>
+        <p class="email"><a href=""> info@lebanesefruits.com</a></p>
+    </div>
+    <div class="follow">
+        <b>Follow Us</b>
+
+        <a href="">Facebook</a>
+        <a href="">Twitter</a>
+        <a href="">Linkedin</a>
+
+
+    </div>
+
+</footer>
+
+<aside id="mobileNav">
+    <a href="/about">About us</a>
+    <ul>
+        <a href="/our-company">Our Company</a>
+        <a href="/our-team">Our Team</a>
+        <a href="/retailers">Retailers</a>
+    </ul>
+    <a href="/products">Products</a>
+    <ul>
+        <a href="/products/fruit">Fruits</a>
+        <a href="/products/vegetables">Vegetables</a>
+        <a href="/products/calendar">Calendar</a>
+    </ul>
+    <a href="/news">News</a>
+    <a href="/contact">Contact</a>
+</aside>
+<script>
+var tabs = document.querySelectorAll('.tab');
+var tabPanel = document.querySelectorAll('.tab-panel');
+var changeTab = function(el){
+    removeActiveTab()
+    removeActiveTabBtn()
+    el.classList.add('active')
+    console.log(el.dataset.target)
+    var panel = document.querySelector(el.dataset.target);
+    panel.classList.add('active')
+}
+var removeActiveTabBtn = function(){
+    for(var i = 0;i < tabs.length;i++){
+    tabs[i].classList.remove('active');
+}
+}
+var removeActiveTab = function(){
+    for(var i = 0;i < tabPanel.length;i++){
+        tabPanel[i].classList.remove('active');
+}
+}
+for(var i = 0;i < tabs.length;i++){
+    tabs[i].addEventListener('click', function(){
+        changeTab(this)
+})
+}
+
+var toggleCollapse = function(el){
+    var target = document.querySelector(el.dataset.target)
+    console.log(target, 't')
+    target.classList.toggle('hide-collapse');
+    var icon = el.querySelector('span.icon');
+    target.classList.contains('hide-collapse') ?
+    icon.innerHTML = "&#43;" :
+    icon.innerHTML = "&#8722;"
+}
+
+var collapses = document.querySelectorAll('.collapse-btn');
+for(var i = 0;i < collapses.length;i++){
+    collapses[i].addEventListener('click',function(){
+        console.log('click')
+        toggleCollapse(this)
+    })
+}
+
+
+</script>
+
+</body>
+</html>

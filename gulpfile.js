@@ -41,7 +41,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('images', () =>
-    gulp.src('src/images/*')
+    gulp.src('src/images/*/*/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'))
 );

@@ -1,0 +1,92 @@
+
+header {
+  background-size: cover;
+  background-color: #c9d56d;
+  background-image: url(../images/apple.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+
+  &:before {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: absolute;
+    background-color: #f16c6c;
+    animation-fill-mode: forwards !important;
+    animation: fadeBGImg 2.3s;
+    z-index: 1;
+  }
+  .welcome-text {
+    top: 44%;
+    position: absolute;
+    width: 100%;
+
+    h1 {
+      color: white;
+      text-align: center;
+      font-weight: 100;
+      margin-top: 0rem;
+      font-size: calc(3.25rem + 6 * ((100vw - 320px) / 1080));
+      font-family: "Playfair Display", serif;
+      animation: .5s scaleIn ease-in-out;
+      animation-fill-mode: forwards;
+      overflow: hidden;
+    }
+
+    a.learn {
+      width: 7.5rem;
+      border-radius: 27px;
+      padding: 1.5rem 3rem;
+      margin: auto;
+      margin-left: calc(50vw - 6.75rem);
+      background-color: transparent;
+      border: .1rem solid white;
+      font-size: 1rem;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: helvetica, arial, sans-serif;
+      transition: .3s;
+      margin-top: 3rem;
+      display: block;
+      text-shadow: 0px 0px 3px #5a5858;
+      letter-spacing: 1px;
+
+      &:hover {
+        background-color: #FF9800;;
+        color: white;
+        border-color: #ffffff;
+
+      }
+    }
+  }
+}
+
+
+a.arrow-down {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-left: calc(50vw - 1.75rem);
+  margin-top: 9rem;
+  animation: bounce 1s infinite ease-in-out;
+  animation-delay: .3s;
+  position: absolute;
+  top: calc(88vh - 128px);
+  font-weight: 100;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transform: translateY(0px) rotate(90deg);
+  text-shadow: 5px 2px 20px black;
+
+  &:hover {
+    font-weight: 400;
+  }
+}
+

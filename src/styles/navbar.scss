@@ -1,0 +1,213 @@
+
+nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+  animation: slideDownInit 1.4s ease-in;
+  animation-fill-mode: forwards !important;
+  transform: translateY(-200px);
+  background-color: white;
+  will-change: transform, opacity;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  width: 100vw;
+
+  .options.right-desktop {
+    display: none;
+  }
+
+  a.logo {
+    height: 4rem;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: 1.5s ease-in-out;
+
+    img {
+      height: 11rem;
+      border-radius: 10px;
+    }
+  }
+}
+
+nav div.options.right.desktop {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  div.dropdown {
+    text-align: center;
+
+    a.dropbtn {
+      width: 100%;
+      padding: 4.5rem 1rem 3.5rem;
+      position: relative;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.275rem;
+      border: 0;
+      outline: 0;
+      color: #000;
+      background-color: transparent;
+      font-weight: 100;
+      text-transform: uppercase;
+      -webkit-transition: .2s ease-in;
+      transition: .2s ease-in;
+      text-decoration: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      a.dropbtn {
+        color: red;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  nav {
+    .options.right.desktop {
+      font-weight: 100;
+      //display: flex;
+      ul {
+        display: none;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-size: .875rem;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        //padding: 4.5rem 1rem;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        float: right;
+
+        &:hover + ul {
+          display: block;
+          top: 4rem;
+          padding-left: 9px;
+          list-style: none;
+          background-color: green;
+        }
+
+        &:nth-child(1):hover + ul {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          margin: 0px;
+          padding-left: 3px;
+        }
+
+        a ul li {
+          padding: 1rem 0rem;
+        }
+      }
+    }
+
+    button.hamburger {
+      display: none;
+    }
+
+    &.fixed-nav {
+      ul.options.left.desktop li.drop a {
+        padding: 1.5rem 1rem;
+      }
+
+      ul.options.left.desktop li.drop ul.dropdown-group {
+        position: absolute;
+        top: 4rem;
+      }
+
+      div.dropdown {
+        text-align: center;
+
+        a.dropbtn {
+          width: 100%;
+          padding: 1.5rem 1rem 1.5rem;
+        }
+      }
+
+    }
+
+  }
+
+
+
+  a.dropbtn {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding: 4.5rem 1rem 3.5rem;
+    background-color: transparent;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.275rem;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-weight: 100;
+  }
+
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: red;
+  }
+
+
+  nav.fixed-nav .options.right-desktop {
+    height: 1rem;
+  }
+  nav.fixed-nav {
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 4rem;
+    transition: ease-in-out;
+    z-index: 10;
+  }
+  nav.fixed-nav .options.right-desktop a, nav.fixed-nav .options.right-desktop .dropdown .dropbtn {
+    color: black;
+    padding: .8rem 1rem;
+  }
+
+  nav.fixed-nav a.logo {
+    color: black;
+    padding-top: .1rem;
+    transform: scale(.5);
+    transform-origin: top;
+  }
+  nav.fixed-nav {
+    a.dropbtn {
+      display: inline-block;
+      color: #000;
+      text-decoration: none;
+      padding: 1.5rem 1rem 1.5rem;
+    }
+  }
+  nav .options.right-desktop .dropdown .dropdown-content a:hover {
+    background-color: #444141;
+    color: #fc5a5d;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+  header nav .options.right-desktop {
+    display: none;
+  }
+}
+
+
+
+.dropdown:hover button.dropbtn {
+  background-color: white;
+}

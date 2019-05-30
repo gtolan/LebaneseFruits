@@ -1,6 +1,5 @@
 # Webpack-Gulp-dev-env-start
-Es6 PWA base project for all 100 scores on lighthouse
-Built With
+Lebanese Fruits
 
 Webpack
 *  - generate index.html
@@ -12,7 +11,6 @@ Webpack
 *  - replace / add styles and scripts to index
 *  - Add defered styles by Media Query
 
-...with the help of
 
 Gulp
 * - Compress and copy images

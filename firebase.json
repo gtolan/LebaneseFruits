@@ -3,22 +3,92 @@
     "rules": "database.rules.json"
   },
   "functions": {
-    "predeploy": [
-      "npm --prefix \"$RESOURCE_DIR\" run lint"
-    ],
+    "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"],
     "source": "functions"
   },
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/products/products",
+        "destination": "/products",
+        "type": 301
+      }
     ],
     "rewrites": [
       {
-        "source": "/",
-        "destination": "/index.html"
+        "source": "/news",
+        "destination": "/news.html"
+      },
+      {
+        "source": "/contact",
+        "destination": "/contact.html"
+      },
+      {
+        "source": "/products/lebanese",
+        "destination": "/products.html"
+      },
+
+      {
+        "source": "/products/southAfrican",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/australian",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/lebanese/**/**",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/southAfrican/**/**",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/australian/**/**",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/about.html"
+      },
+      {
+        "source": "/about-us",
+        "destination": "/about.html"
+      },
+      {
+        "source": "/our-company",
+        "destination": "/about.html"
+      },
+      {
+        "source": "/our-team",
+        "destination": "/team.html"
+      },
+      {
+        "source": "/retailers",
+        "destination": "/retailers.html"
+      },
+      {
+        "source": "/edit-pages",
+        "destination": "/edit-pages.html"
+      },
+      {
+        "source": "/products",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/fruit",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/vegetables",
+        "destination": "/products.html"
+      },
+      {
+        "source": "/products/calendar",
+        "destination": "/products.html"
       },
       {
         "source": "/home",
@@ -46,33 +116,44 @@
         "destination": "/index.html"
       }
     ],
-    "headers": [ {
-      "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-      "headers" : [ {
-        "key" : "Access-Control-Allow-Origin",
-        "value" : "max-age=2628000"
-      } ]
-    }, {
-      "source" : "**/*.@(js|css|ttf)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=0"
-      } ]
-    },
+    "headers": [
       {
-        "source" : "**/*.@(mp4|webm)",
-        "headers" : [ {
-          "key" : "Cache-Control",
-          "value" : "max-age=2628000"
-        } ]
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "max-age=2628000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css|ttf)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(mp4|webm)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2628000"
+          }
+        ]
       },
 
       {
-        "source" : "**/*.@(jpg|jpeg|gif|png)",
-        "headers" : [ {
-          "key" : "Cache-Control",
-          "value" : "max-age=2628000"
-        } ]
-      }]
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2628000"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "gulp images && gulp sass && webpack && gulp inline",
+    "bu": " gulp sass && webpack",
+    "build": "gulp images && gulp sass && webpack",
+    "in-build": "gulp images && gulp sass && webpack && gulp inline",
     "prepublish": "npm run build",
     "webpack": "webpack",
     "start": "http-server",

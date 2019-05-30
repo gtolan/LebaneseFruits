@@ -1,0 +1,353 @@
+<!DOCTYPE html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lebanese Fruits</title>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="faviconsrc">
+
+    <link href="undefined" rel="preload" as="font">
+    <link href="undefined" rel="preload" as="font">
+    <link rel="stylesheet" type="text/css" href="/styles/above-fold-inline.css">
+    <link rel="icon" type="image/png" href="/images/icons/MDlogFavIco.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<">
+    <!-- iPad Retina-->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="faviconsrc<">
+    <!--iPhone Retina -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="faviconsrc<">
+    <!-- iPad 1 e 2 -->
+    <link rel="apple-touch-icon-precomposed" href="faviconsrc<">
+    <!-- iPhone, iPod e Android 2.2+ -->
+    <style>
+        @keyframes scaleOutOpacity {
+            0% {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+            20% {
+                opacity: 1;
+
+            }
+            70% {
+                opacity: 1;
+                width: 100vw;
+                height: 120vh;
+                opacity: 1;
+                transform: scale(2.5, 2.5);
+
+            }
+            90% {
+                opacity: .01;
+                transform: scale(2.5, 2.5);
+                width: 100vw;
+                height: 120vh;
+            }
+            99%{
+                opacity: 0;
+                transform: scale(2.5, 2.5);
+                width: 100vw;
+                height: 120vh;
+            }
+            100% {
+                width: 0px;
+                height: 0px;
+                opacity: 0;
+                transform: scale(15, 15);
+            }
+
+        }
+
+        .loader-img {
+            width: 100%;
+            position: absolute;
+            height: 110vh;
+            will-change: opacity, transform;
+        }
+        .loader-img.start-hide-animation {
+            animation: scaleOutOpacity 1s;
+            animation-fill-mode: forwards;
+            animation-delay: .2s;
+        }
+        .load-hidden{
+            display: none;
+        }
+        @media only screen and (max-width: 992px) {
+            .loader-img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+        div.loader-wrap {
+            width: auto;
+            height: auto;
+        }
+        div.loader-wrap:after {
+            content: "";
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            min-height: 30rem;
+        }
+
+
+        section.header-image.veg {
+    background-image: url(../images/veg-bg.png);
+        }
+
+    </style>
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" type="text/css" href="/styles/below-fold.css">
+        <link rel="stylesheet" type="text/css" href="/styles/above-fold-inline.css">
+        <link rel="stylesheet" type="text/css" href="/styles/products.css">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 900px)">
+        <link rel="stylesheet" type="text/css" href="/styles/desktop.css" media="screen and (min-width: 900px)">
+    </noscript>
+
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Lebanese Fruit",
+        "url": "http://LebaneseFruits.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://LebaneseFruits.ie/search/{search_term}",
+            "query-input": "required name=search_term"
+        }
+    }
+    </script>
+
+    <script>
+
+        var loadDeferredStyles = function () {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function () {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+
+    <script defer src="/__/firebase/5.7.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132390266-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-XXXXXXX-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileImage" content="tileimgsrc">
+    <meta name="msapplication-TileColor" content="tilecolor">
+    <meta name="description" content="Lebanese Fruit - International Exporters">
+    <meta name="theme-color" content="#4285f4">
+</head>
+<body class="fixed-height">
+<div id="navWatch"></div>
+<nav class="fixed-nav">
+    <button class="hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <ul class="options left desktop">
+
+        <li class="drop"><a href="about">About</a>
+            <ul class="dropdown-group">
+                <li class="drop-item"><a href="./our-company">Our Company</a></li>
+                <li class="drop-item"><a href="./our-team">Our Team</a></li>
+                <li class="drop-item"><a href="./retailers">Retailers</a></li>
+            </ul>
+        </li>
+        <li class="drop"><a href="products">Products</a>
+            <ul class="dropdown-group">
+                <li class="drop-item"><a href="./products/fruit">Fruit</a></li>
+                <li class="drop-item"><a href="./products/vegetables">Vegetables</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <a href="/home" class="logo" title="Lebanese Fruits Home Home" aria-label="Lebanese Fruit Home" id="logo">
+        <img src="/images/lebfruit.jpg">
+    </a>
+    <div class="options right desktop">
+
+        <div class="dropdown">
+            <a href="./news" class="dropbtn">News
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+        </div>
+        <div class="dropdown">
+            <a href="./contact" class="dropbtn">Contact
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+</nav>
+<div class="loader-wrap">
+<img class="loader-img" src="/images/loader.png">
+</div>
+<section class="header-image load-hidden">
+    <h1 class="title" id="title">Products</h1>
+</section>
+<section class="product-view load-hidden" data-active="leb">
+    <div class="button-group harvest">
+        <button class="active flag" data-country="leb"><span><img src="/images/flags/lebflag.png" class="flag"></span>Lebanese
+            Harvest
+        </button>
+        <button class="flag" data-country="saf"><span><img src="/images/flags/saflag.png" class="flag"></span>South
+            African Harvest
+        </button>
+        <button class="flag" data-country="aus"><span><img src="/images/flags/ausflag.png" class="flag"></span>Australian
+            Harvest
+        </button>
+    </div>
+    <div class="product-slider fruit">
+        <a href="" class="item"><img src="/images/products/fruits/apple-product.jpeg"></a>
+        <a href="" class="item"><img src="/images/products/fruits/pear-product.png"></a>
+        <a href="" class="item"><img src="/images/products/fruits/orange-product.png"></a>
+        <a href="" class="item"><img src="/images/products/fruits/banana-product.jpg"></a>
+        <a href="" class="item"><img src="/images/products/fruits/mango-product.jpeg"></a>
+        <a href="/products/southAfrican/strawberries" class="item"><img src="/images/products/fruits/straw-product.png"></a>
+        <a href="" class="item"><img src="/images/products/fruits/kiwi-product.jpg"></a>
+
+    </div>
+    <button class="enlarge fruit">&#43;</button>
+
+
+    <div class="product-slider veg">
+        <a href="" class="item"><img src="/images/products/vegetables/potato.png"></a>
+        <a href="" class="item"><img src="/images/products/vegetables/broccoli.png"></a>
+        <a href="" class="item"><img src="/images/products/vegetables/cabbage.png"></a>
+        <a href="" class="item"><img src="/images/products/vegetables/onion.png"></a>
+        <a href="" class="item"><img src="/images/products/vegetables/tomatoe.png"></a>
+        <a href="" class="item"><img src="/images/products/vegetables/pumpkin.png"></a>
+        <a href="" class="item"><img src="/images/products/vegetables/lettuce.jpg"></a>
+
+    </div>
+    <button class="enlarge fruit">&#43;</button>
+</section>
+
+
+<section class="product-calendar load-hidden" data-active="leb">
+    <div class="button-group harvest">
+        <button class="active flag calendar" data-country="leb"><span><img src="/images/flags/lebflag.png" class="flag"></span>Lebanese
+            Harvest
+        </button>
+        <button class="flag calendar" data-country="saf"><span><img src="/images/flags/saflag.png" class="flag"></span>South
+            African Harvest
+        </button>
+        <button class="flag calendar" data-country="aus"><span><img src="/images/flags/ausflag.png" class="flag"></span>Australian
+            Harvest
+        </button>
+    </div>
+    <div class="product-seasons fruit">
+
+    </div>
+
+    <div class="product-seasons veg">
+
+    </div>
+
+</section>
+
+<section id="product-individual" class="load-hidden" data-active="leb">
+    <div class="wrapimg">
+        <img src="" class="highlight">
+    </div>
+    <div class="text-description">
+        <div class="cal-item"></div>
+        <div id="itemProductAvail"></div>
+        <div id="productInfoText"></div>
+    </div>
+</section>
+
+
+<section id="whatsInSeason" class="load-hidden">
+    <h1 class="season">Whats in season</h1>
+    <a class="season" href="/products/calendar">Learn More</a>
+</section>
+
+<section id="products">
+
+</section>
+
+<footer class="load-hidden">
+    <div class="contact">
+        <b>Contact</b>
+        <p>Address 1.</p>
+        <p>Street 2</p>
+        <p>City, Country</p>
+    </div>
+    <div class="number">
+        <p class="tel"><a href="">+35 1 671 8806</a></p>
+        <p class="email"><a href=""> info@lebanesefruits.com</a></p>
+    </div>
+    <div class="follow">
+        <b>Follow Us</b>
+
+        <a href="">Facebook</a>
+        <a href="">Twitter</a>
+        <a href="">Linkedin</a>
+
+
+    </div>
+
+</footer>
+
+<aside id="mobileNav">
+        <a href="/about">About us</a>
+        <ul>
+            <a href="/our-company">Our Company</a>
+            <a href="/our-team">Our Team</a>
+            <a href="/retailers">Retailers</a>
+        </ul>
+        <a href="/products">Products</a>
+        <ul>
+            <a href="/products/fruit">Fruits</a>
+            <a href="/products/vegetables">Vegetables</a>
+            <a href="/products/calendar">Calendar</a>
+        </ul>
+        <a href="/news">News</a>
+        <a href="/contact">Contact</a>
+    </aside>
+<script defer type="text/javascript" src="/scripts/products.js"></script>
+<script>
+    var ham = document.querySelector('.hamburger');
+    var nav = document.getElementById('mobileNav');
+
+    ham.addEventListener('click', function(){
+        this.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+        document.body.classList.toggle('fixed');
+    })
+</script>
+
+</body>
+</html>

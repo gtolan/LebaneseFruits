@@ -1,8 +1,11 @@
-import { MetroApp } from './shell'
-import { ServiceWorker } from './serviceWorker';
-import { InterObserver } from './intersectionObserver'
+import { ServiceWorker } from "./serviceWorker";
+import { InterObserver } from "./intersectionObserver";
+import { removeLoadHiddenTags, addEvents } from "./shell";
 
-MetroApp.init();
+addEvents();
+document.addEventListener("DOMContentLoaded", function() {
+  removeLoadHiddenTags();
+});
+
 ServiceWorker.init();
-InterObserver.init();
-
+new InterObserver();

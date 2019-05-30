@@ -3,31 +3,31 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin');
-const appConfig =  require('./app.config.js');
+const appConfig = require('./app.config.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const MediaQueryPlugin = require('media-query-plugin');
-
-
-// const lazyloadCSS = new ExtractTextPlugin('./src/styles/above-fold-inline.scss');
 
 
 // file types & file links
 const resource = {
     // js: { somejs: '//cdn/bootstrap/bootstrap.min.js' },
-    man: { manifest: '/manifest.json'},
-    pre: { font: 'https://fonts.googleapis.com/css?family=Raleway'},
-    css: { critical: '/styles/above-fold-inline.css' },
-    css: { hamburger: '/styles/hamburger.css' },
-    mob: { mobile: '/styles/mobile.css' },
-    desk: { desktop: '/styles/desktop.css' },
-    img: { favicon: appConfig.favicon }
+    man: {manifest: '/manifest.json'},
+    rep: {mons: 'https://fonts.googleapis.com/css?family=Montserrat'},
+    pre: {font2: 'https://fonts.googleapis.com/css?family=Playfair+Display'},
+    css: {critical: './styles/above-fold-inline.css'},
+    css: {hamburger: './styles/hamburger.css'},
+    belowfold: {fold: '/styles/below-fold.css'},
+    mob: {mobile: '/styles/mobile.css'},
+    desk: {desktop: '/styles/desktop.css'},
+    img: {favicon: appConfig.favicon}
 }
 
 const tpl = {
     img: '<link rel="shortcut icon" href="%s">',
     pre: '<link href="%s" rel="preload" as="font">',
+    rep: '<link href="%s" rel="preload" as="font">',
     man: '<link rel="manifest" href="%s">',
     css: '<link rel="stylesheet" type="text/css" href="%s" inline>',
+    belowfold:'<link rel="stylesheet" type="text/css" href="%s" >',
     mob: '<link rel="stylesheet" type="text/css" href="%s" media="screen and (max-width: 900px)">',
     desk: '<link rel="stylesheet" type="text/css" href="%s" media="screen and (min-width: 900px)">',
     js: '<script type="text/javascript" src="%s"></script>'
@@ -37,7 +37,8 @@ const tpl = {
 const config = {
 
     // Entry
-    entry:{ app: ['./src/js/index.js'],
+    entry: {
+        app: ['./src/js/index.js'],
     },
     // Output
     mode: "production",
@@ -46,8 +47,8 @@ const config = {
         path: path.resolve(__dirname, 'dist')
     },
     // Loaders
-    module : {
-        rules : [
+    module: {
+        rules: [
             {
                 test: /\.s?[ac]ss$/,
                 exclude: /node_modules/,
@@ -77,8 +78,8 @@ const config = {
         }),
 
         new webpack.LoaderOptionsPlugin({
-            options:{
-                postcss:[
+            options: {
+                postcss: [
                     autoprefixer()
                 ]
             }
@@ -120,8 +121,8 @@ const config = {
                 replacement: appConfig.language
             },
             {
-                pattern: /(<!--\s*|@@)(css|js|img|mob|desk|man|pre):([\w-\/]+)(\s*-->)?/g,
-                replacement: function(match, $1, type, file, $4, index, input) {
+                pattern: /(<!--\s*|@@)(css|js|img|mob|desk|man|pre|rep|belowfold):([\w-\/]+)(\s*-->)?/g,
+                replacement: function (match, $1, type, file, $4, index, input) {
                     // those formal parameters could be:
                     // match: <-- css:bootstrap-->
                     // type: css

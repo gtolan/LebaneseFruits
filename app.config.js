@@ -1,9 +1,9 @@
 module.exports = {
     language: 'en',
-    description: "App description",
+    description: "Lebanese Fruit - International Exporters",
     word: "defenestration",
     pattern: /([A-Z])\w+/,
-    appName: "appName",
+    appName: "Lebanese Fruits",
     msTileColor: "tilecolor",
     msTileImage: "tileimgsrc",
     favicon: "faviconsrc",

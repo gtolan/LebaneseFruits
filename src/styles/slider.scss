@@ -1,0 +1,141 @@
+
+
+
+.slider {
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+
+  img {
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    transition: .5s ease-in-out;
+
+    &:nth-child(1) {
+      transform: translateX(-100vw);
+    }
+
+    &:nth-child(2) {
+      transform: translateX(-200vw);
+    }
+
+    &:nth-child(3) {
+      transform: translateX(-300vw);
+    }
+
+    &.slide-in {
+      transform: translateX(0%)
+    }
+
+    &.slide-out {
+      transform: translateX(100vw)
+    }
+  }
+}
+
+
+
+
+section, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+section h1 {
+  font-size: calc(1.75rem + 1 * ((100vw - 320px) / 680));
+  margin: auto;
+  padding: 6rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+
+nav.fixed-nav div.options.right.desktop div.dropdown a.dropbtn {
+  padding: 1.5rem 1rem 1.5rem;
+
+}
+
+ul.options.left.desktop {
+  margin: 0px;
+  padding: 0rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  li.drop {
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.275rem;
+    border: 0;
+    outline: 0;
+    color: #000;
+    background-color: transparent;
+    font-weight: 100;
+    text-transform: uppercase;
+    -webkit-transition: .2s ease-in;
+    transition: .2s ease-in;
+    text-decoration: none;
+
+    a {
+      position: relative;
+      display: inline-block;
+      color: black;
+      text-decoration: none;
+      padding: 4.5rem 1rem 3.5rem;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    &:hover > ul.dropdown-group {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      transform-origin: top;
+      animation-fill-mode: forwards;
+      animation: .5s scaleDownOpen;
+    }
+
+    ul.dropdown-group {
+      position: absolute;
+      top: 9.5rem;
+      box-shadow: 0px 5px 2px 2px #736d6dba;
+      margin-left: 6rem;
+      text-align: left;
+      background-color: #fff;
+      display: none;
+      margin: 0;
+      width: 87%;
+      padding: 0;
+      overflow: hidden;
+      margin-left: 3rem;
+
+      li.drop-item {
+        padding: 0.5rem 1rem;
+        clear: both;
+        width: 100%;
+        position: relative;
+
+        &:hover {
+          background-color: gainsboro;
+
+          a {
+            color: red;
+          }
+        }
+
+        a {
+          padding: 0px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+
+

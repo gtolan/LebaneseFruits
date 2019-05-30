@@ -6,18 +6,24 @@
 
     <!-- man:manifest -->
     <!-- img:favicon -->
-    <link rel="stylesheet" type="text/css" href="/styles/above-fold-inline.css" inline>
-    <!-- css:hamburger -->
-    <!-- pre:font -->
-    <!-- pre:font1 -->
 
+    <!-- rep:mons -->
+    <!-- pre:font2 -->
+    <link rel="stylesheet" type="text/css" href="./styles/above-fold-inline.css" inline>
     <link rel="icon" type="image/png" href="/images/icons/MDlogFavIco.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= htmlWebpackPlugin.options.icon144 %><"><!-- iPad Retina-->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= htmlWebpackPlugin.options.icon114 %><"><!--iPhone Retina -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= htmlWebpackPlugin.options.icon72 %><"><!-- iPad 1 e 2 -->
-    <link rel="apple-touch-icon-precomposed" href="<%= htmlWebpackPlugin.options.icon %><"><!-- iPhone, iPod e Android 2.2+ -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= htmlWebpackPlugin.options.icon144 %><">
+    <!-- iPad Retina-->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= htmlWebpackPlugin.options.icon114 %><">
+    <!--iPhone Retina -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= htmlWebpackPlugin.options.icon72 %><">
+    <!-- iPad 1 e 2 -->
+    <link rel="apple-touch-icon-precomposed" href="<%= htmlWebpackPlugin.options.icon %><">
+    <!-- iPhone, iPod e Android 2.2+ -->
 
     <noscript id="deferred-styles">
+
+        <!-- belowfold:fold -->
+        <link rel="stylesheet" type="text/css" href="/styles/above-fold-inline.css">
         <!-- mob:mobile -->
         <!-- desk:desktop -->
     </noscript>
@@ -25,16 +31,18 @@
     <script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "name": "Strata3",
-        "url": "http://strata3.ie/",
+        "name": "Lebanese Fruit",
+        "url": "http://LebaneseFruits.com/",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "http://strata3.ie/search/{search_term}",
+            "target": "http://LebaneseFruits.ie/search/{search_term}",
             "query-input": "required name=search_term"
         }
     }
+    </script>
 
     <script>
+
         var loadDeferredStyles = function () {
             var addStylesNode = document.getElementById("deferred-styles");
             var replacement = document.createElement("div");
@@ -51,8 +59,6 @@
     </script>
 
 
-
-
     <script defer src="/__/firebase/5.7.0/firebase-app.js"></script>
     <script defer src="/__/firebase/5.7.0/firebase-auth.js"></script>
     <script defer src="/__/firebase/5.7.0/firebase-database.js"></script>
@@ -61,102 +67,77 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132390266-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-XXXXXXX-1');
     </script>
 
 </head>
+<div id="navWatch"></div>
+<nav>
+    <button class="hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
 
+    <ul class="options left desktop">
+
+        <li class="drop"><a href="about">About</a>
+            <ul class="dropdown-group">
+                <li class="drop-item"><a href="/our-company">Our Company</a></li>
+                <li class="drop-item"><a href="/our-team">Our Team</a></li>
+                <li class="drop-item"><a href="/retailers">Retailers</a></li>
+            </ul>
+        </li>
+        <li class="drop"><a href="products">Products</a>
+            <ul class="dropdown-group">
+                <li class="drop-item"><a href="/products/fruit">Fruit</a></li>
+                <li class="drop-item"><a href="/products/vegetables">Vegetables</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <a href="/home" class="logo" title="Lebanese Fruit Home" aria-label="Lebanese Fruit Home" id="logo">
+        <img src="/images/lebfruit.jpg">
+    </a>
+    <div class="options right desktop">
+
+        <div class="dropdown">
+            <a href="/news" class="dropbtn">News
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+        </div>
+        <div class="dropdown">
+            <a href="/contact" class="dropbtn">Contact
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+</nav>
 <header>
     <div class="slider">
         <img class="" src="/images/oranges.jpg" class="slider one">
         <img class="" src="/images/pears.jpg" class="slider two">
         <img class="" src="/images/bananas.jpg" class="slider three">
     </div>
-    <div id="navWatch"></div>
-    <nav>
 
-
-        <div class="options left desktop">
-
-            <div class="dropdown">
-                <button class="dropbtn">Products
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/fruit">Fruit</a>
-                    <a href="/vegetables">Vegetables</a>
-                    <a href="/harvest">Harvest</a>
-                    <a href="/calendar">Calendar</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">About
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/people">Our Company</a>
-                    <a href="/approach">Approach</a>
-                    <a href="/facilities">Facilities</a>
-                </div>
-            </div>
-        </div>
-        <a href="/home" class="logo" title="Strata3 Home" aria-label="Strata3 Home" id="logo">
-            <img src="/images/lebfruit.jpg">
-        </a>
-        <div class="options right desktop">
-
-            <div class="dropdown">
-                <button class="dropbtn">News
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Digital-strategy">Digital Strategy</a>
-                    <a href="/Approach">UX & Design</a>
-                    <a href="/Development">Development</a>
-                    <a href="/Innovation">Innovation</a>
-                    <a href="/Analytics">Analytics & Insight</a>
-                    <a href="/Technology">Sponsorship</a>
-                    <a href="/Project-management">Project Management</a>
-                    <a href="/Hosting">Hosting</a>
-                    <a href="/Support">Support</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Contact
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="People">People</a>
-                    <a href="Approach">Approach</a>
-                    <a href="Awards">Awards</a>
-                    <a href="Partners">Partners</a>
-                    <a href="CSR">CSR</a>
-                    <a href="Sponsorship">Sponsorship</a>
-                    <a href="Sponsorship">Careers</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-        </div>
-        <button class="hamburger hamburger--vortex" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-        </button>
-
-    </nav>
 
     <div class="welcome-text">
         <h1>Fruit & Vegetable Exporters</h1>
-        <a href="">Learn More</a>
+        <a class="learn" href="/about">Learn More</a>
     </div>
 
     <a class="arrow-down" href="#tagLine">&#10142;</a>
@@ -167,34 +148,63 @@
 
 </section>
 <section id="ourWork">
-    <h1 >Our Products<span class="bottom-border"></span></h1>
-    <div class="tab">
+    <h1>Our Products<span class="bottom-border"></span></h1>
+
+    <div class="tab"><a class="jump" href="/products/fruit">
         <h1>Fruit</h1>
-        <p>Harvest</p>
-    </div>
-    <div class="tab ">
-        <h1>Vegetables</h1>
-        <p>Harvest</p>
-    </div>
-    <div class="tab ">
-        <h1>Harvest</h1>
-        <p>Title</p>
-    </div>
-    <div class="tab ">
-        <h1>Whats in Season</h1>
-        <p>Consulting</p>
+        <p>Harvest</p></a>
     </div>
 
-    <a href="">All Products</a>
+
+    <div class="tab "><a class="jump" href="/products/vegetables">
+        <h1>Vegetables</h1>
+        <p>Harvest</p></a>
+    </div>
+
+
+    <div class="tab "><a class="jump" href="/products">
+        <h1>Harvest</h1>
+        <p>by Country</p></a>
+    </div>
+
+
+    <div class="tab "><a class="jump" href="/products/calendar">
+        <h1>Whats in Season</h1>
+        <p>Calendar</p></a>
+    </div>
+
+
+    <div class="button-group">
+        <button class="active">Lebanese Harvest</button>
+        <button>South African Harvest</button>
+        <button>Australian Harvest</button>
+    </div>
+    <div class="product-slider">
+        <img src="/images/products/fruits/apple-product.jpeg">
+        <img src="/images/products/fruits/pear-product.png">
+        <img src="/images/products/fruits/orange-product.png">
+        <img src="/images/products/fruits/banana-product.jpg">
+        <img src="/images/products/fruits/mango-product.jpeg">
+        <img src="/images/products/fruits/straw-product.png">
+        <img src="/images/products/fruits/kiwi-product.jpg">
+
+    </div>
+    <div class="button-group toggle">
+        <button class="active">Fruits</button>
+        <button>Vegetables</button>
+    </div>
+
+    <a href="/products">All Products</a>
 </section>
 <section id="services">
     <h1>We are the center for storing packing and sending the fresh</h1>
-    <p>We have state of the art cooling rooms to ensure imported and goods for export are kept in the safest and healthiest ways possible.
+    <p>We have state of the art cooling rooms to ensure imported and goods for export are kept in the safest and
+        healthiest ways possible.
         We will stay in touch with our deliveries to maintain high quality and customer service</p>
     <a>View our services</a>
 </section>
 <section id="blog">
-    <h1 >News<span class="bottom-border"></span></h1>
+    <h1>News<span class="bottom-border"></span></h1>
     <article>
         <div class="main" data-img="/images/harvest2.jpg"></div>
         <div class="text">
@@ -202,7 +212,8 @@
             <span class="bottom-border left"></span>
             <b>by Brahim</b>
             <p class="date-time">01.01.2019 - 2 min read</p>
-            <p>We have a fresh selection of fruits and vegetables from our latest harvest<a class="more" href=""> Read more...</a></p>
+            <p>We have a fresh selection of fruits and vegetables from our latest harvest<a class="more" href=""> Read
+                more...</a></p>
         </div>
     </article>
     <article>
@@ -229,7 +240,7 @@
 </section>
 <section id="workWithUs">
     <h1>Let's start working together</h1>
-    <a href="">Get in Touch</a>
+    <a href="/contact">Get in Touch</a>
 </section>
 
 <footer>
@@ -254,7 +265,26 @@
     </div>
 
 </footer>
-<script defer src="/scripts/IntersectionObserver.js"></script>
-<aside id=""></aside>
+
+<aside id="mobileNav">
+    <a href="/about">About us</a>
+    <ul>
+        <a href="/our-company">Our Company</a>
+        <a href="/our-team">Our Team</a>
+        <a href="/retailers">Retailers</a>
+    </ul>
+    <a href="/products">Products</a>
+    <ul>
+        <a href="/products/fruit">Fruits</a>
+        <a href="/products/vegetables">Vegetables</a>
+        <a href="/products/calendar">Calendar</a>
+    </ul>
+    <a href="/news">News</a>
+    <a href="/contact">Contact</a>
+</aside>
+
+<script>
+
+</script>
 </body>
 </html>

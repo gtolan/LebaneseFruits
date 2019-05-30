@@ -1,36 +1,36 @@
 {
-  "name": "gerardtolan.com",
-  "short_name": "MetroDublin",
+  "name": "https://lebanesefruit-36c3e.firebaseapp.com",
+  "short_name": "Lebanese Fruit",
   "icons": [{
-    "src": "images/icons/MetroDublin96.png",
+    "src": "images/icons/LebFruitLogo96.png",
     "sizes": "96x96",
     "type": "image/png"
   }, {
-    "src": "images/icons/MetroDublin128.png",
+    "src": "images/icons/LebFruitLogo128.png",
     "sizes": "128x128",
     "type": "image/png"
   }, {
-    "src": "images/icons/MetroDublin144.png",
+    "src": "images/icons/LebFruitLogo144.png",
     "sizes": "144x144",
     "type": "image/png"
   }, {
-    "src": "images/icons/MetroDublin152.png",
+    "src": "images/icons/LebFruitLogo152.png",
     "sizes": "152x152",
     "type": "image/png"
   }, {
-    "src": "images/icons/MetroDublin192.png",
+    "src": "images/icons/LebFruitLogo192.png",
     "sizes": "192x192",
     "type": "image/png"
   }, {
-    "src": "images/icons/MetroDublin256.png",
+    "src": "images/icons/LebFruitLogo256.png",
     "sizes": "256x256",
     "type": "image/png"
   },{
-    "src": "images/icons/MetroDublin512.png",
+    "src": "images/icons/LebFruitLogo512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "start_url": "https://metrodublin-21829.firebaseapp.com/",
+  "start_url": "https://lebanesefruit-36c3e.firebaseapp.com/",
   "display": "standalone",
   "background_color": "#4285f4",
   "theme_color": "#6116e8",
