@@ -8,6 +8,8 @@
     <!-- img:favicon -->
     <link rel="stylesheet" type="text/css" href="/styles/above-fold-inline.css" inline>
     <!-- css:hamburger -->
+    <!-- pre:font -->
+    <!-- pre:font1 -->
 
     <link rel="icon" type="image/png" href="/images/icons/MDlogFavIco.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= htmlWebpackPlugin.options.icon144 %><"><!-- iPad Retina-->
@@ -19,6 +21,18 @@
         <!-- mob:mobile -->
         <!-- desk:desktop -->
     </noscript>
+
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Strata3",
+        "url": "http://strata3.ie/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://strata3.ie/search/{search_term}",
+            "query-input": "required name=search_term"
+        }
+    }
 
     <script>
         var loadDeferredStyles = function () {
@@ -36,7 +50,7 @@
         else window.addEventListener('load', loadDeferredStyles);
     </script>
 
-    <!-- pre:font -->
+
 
 
     <script defer src="/__/firebase/5.7.0/firebase-app.js"></script>
@@ -50,318 +64,197 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-132390266-1');
+        gtag('config', 'UA-XXXXXXX-1');
     </script>
 
 </head>
 
-<body>
-<!-- -============================================================- -->
-<nav>
-    <button id="menu" class="hamburger hamburger--collapse" type="button" aria-label="Sidenav Menu Button">
-                <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                </span>
-    </button>
-    <h1 class="name">
-        <a href="index.html"><i>Metro</i></a> Dublin
-    </h1>
-    <div class="right-top-menu">
-        <button id="siteMap">Site Map</button>
-    </div>
-</nav>
-<!-- -============================================================- -->
-<div class="video-mobile-wrapper">
-    <video autoplay="true" muted loop="true" poster="./images/metro-1.jpg">
-
-        <source src="./videos/metrodublin3.webm" type="video/webm">
-        <source src="./videos/metrodublin3.mp4" type="video/mp4">
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="/videos/metrodublin2.webm">link to the video</a> instead.</p>
-    </video>
-
-</div>
-
 <header>
+    <div class="slider">
+        <img class="" src="/images/oranges.jpg" class="slider one">
+        <img class="" src="/images/pears.jpg" class="slider two">
+        <img class="" src="/images/bananas.jpg" class="slider three">
+    </div>
+    <div id="navWatch"></div>
+    <nav>
 
-    <section id="jumbotron">
 
-        <h2><i>Metro</i> Dublin</h2>
-        <p>Rapid transit for Dublin</p>
-        <ul class="actions">
-            <li id="supportUs"><a href="#subscribe"  class="button white-out">Show Support</a></li>
-            <li><a href="#features" class="button">Learn More</a></li>
-        </ul>
-    </section>
+        <div class="options left desktop">
+
+            <div class="dropdown">
+                <button class="dropbtn">Products
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/fruit">Fruit</a>
+                    <a href="/vegetables">Vegetables</a>
+                    <a href="/harvest">Harvest</a>
+                    <a href="/calendar">Calendar</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/people">Our Company</a>
+                    <a href="/approach">Approach</a>
+                    <a href="/facilities">Facilities</a>
+                </div>
+            </div>
+        </div>
+        <a href="/home" class="logo" title="Strata3 Home" aria-label="Strata3 Home" id="logo">
+            <img src="/images/lebfruit.jpg">
+        </a>
+        <div class="options right desktop">
+
+            <div class="dropdown">
+                <button class="dropbtn">News
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Digital-strategy">Digital Strategy</a>
+                    <a href="/Approach">UX & Design</a>
+                    <a href="/Development">Development</a>
+                    <a href="/Innovation">Innovation</a>
+                    <a href="/Analytics">Analytics & Insight</a>
+                    <a href="/Technology">Sponsorship</a>
+                    <a href="/Project-management">Project Management</a>
+                    <a href="/Hosting">Hosting</a>
+                    <a href="/Support">Support</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Contact
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="People">People</a>
+                    <a href="Approach">Approach</a>
+                    <a href="Awards">Awards</a>
+                    <a href="Partners">Partners</a>
+                    <a href="CSR">CSR</a>
+                    <a href="Sponsorship">Sponsorship</a>
+                    <a href="Sponsorship">Careers</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        </div>
+        <button class="hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        </button>
+
+    </nav>
+
+    <div class="welcome-text">
+        <h1>Fruit & Vegetable Exporters</h1>
+        <a href="">Learn More</a>
+    </div>
+
+    <a class="arrow-down" href="#tagLine">&#10142;</a>
 </header>
 
+<section id="tagLine">
+    <h1>We are devoted to our mission of supplying you with the finest and freshest Lebanese products</h1>
 
-<div class="hidden pop-up" id="popUp">
-    <header id="close-pop-up">Show your support</header>
-    <h4>Follow us on Social Media</h4>
-    <span class="soc-media">
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-twitter"></a>
-              <a href="#" class="fa fa-linkedin"></a>
-          </span>
-    <a class="support-link" href="#subscribe">Join our mailing list for the latest news</a>
-</div>
+</section>
+<section id="ourWork">
+    <h1 >Our Products<span class="bottom-border"></span></h1>
+    <div class="tab">
+        <h1>Fruit</h1>
+        <p>Harvest</p>
+    </div>
+    <div class="tab ">
+        <h1>Vegetables</h1>
+        <p>Harvest</p>
+    </div>
+    <div class="tab ">
+        <h1>Harvest</h1>
+        <p>Title</p>
+    </div>
+    <div class="tab ">
+        <h1>Whats in Season</h1>
+        <p>Consulting</p>
+    </div>
 
-<!-- -============================================================- -->
-<section id="introduction">
-    <h2>Introducing Metro Dublin. Designed to meet the existing and growing demand for fast, reliable, integrated and sustainable mobility for the Greater Dublin Area.
-    </h2>
-    <p>Devised to maintain and enhance Dublin’s liveability and prosperity – a once in a generation development that will facilitate the transformation of Dublin’s rail network into an international-style metro system</p>
-    <div class="feature-image"><img src="./images/metro-2.JPG" alt="list of features image"></div>
+    <a href="">All Products</a>
+</section>
+<section id="services">
+    <h1>We are the center for storing packing and sending the fresh</h1>
+    <p>We have state of the art cooling rooms to ensure imported and goods for export are kept in the safest and healthiest ways possible.
+        We will stay in touch with our deliveries to maintain high quality and customer service</p>
+    <a>View our services</a>
+</section>
+<section id="blog">
+    <h1 >News<span class="bottom-border"></span></h1>
+    <article>
+        <div class="main" data-img="/images/harvest2.jpg"></div>
+        <div class="text">
+            <h2>Fresh Harvest of 2019</h2>
+            <span class="bottom-border left"></span>
+            <b>by Brahim</b>
+            <p class="date-time">01.01.2019 - 2 min read</p>
+            <p>We have a fresh selection of fruits and vegetables from our latest harvest<a class="more" href=""> Read more...</a></p>
+        </div>
+    </article>
+    <article>
+        <div class="main" data-img="/images/safety.jpg"></div>
+        <div class="text">
+            <h2>Food Safety and Quality</h2>
+            <span class="bottom-border left"></span>
+            <b>by Abood</b>
+            <p class="date-time">09.11.2018 - 2 min read</p>
+            <p>We are determined to always meet Quality and Safety testing.<a class="more" href=""> Read more...</a></p>
+        </div>
+    </article>
+    <article>
+        <div class="main" data-img="/images/package.jpg"></div>
+        <div class="text">
+            <h2>Packaging Process</h2>
+            <span class="bottom-border left"></span>
+            <b>by Hossam</b>
+            <p class="date-time">07.10.2018 - 3 min read</p>
+            <p>A brief guide to our packaging process <a class="more" href=""> Read more...</a></p>
+        </div>
+    </article>
+    <a href="">Read More</a>
+</section>
+<section id="workWithUs">
+    <h1>Let's start working together</h1>
+    <a href="">Get in Touch</a>
 </section>
 
-<!-- -============================================================- -->
-
-<main>
-    <section id="as-seen">
-        <a aria-label="Newstalk link" href="https://www.newstalk.com/Group-unveils-plan-for-sixline-Dublin-Metro-system-by-2025" class="rte newstalk"><img src="./images/icons/newstalk.png" alt="newstalk logo"></a>
-        <a aria-label="JOE.ie link" href="https://www.joe.ie/news/dublin-metro-plans-routes-650260" class="joe"><img src="./images/icons/joelogo.svg" alt="JOE.ie logo"></a>
-        <a aria-label="Irish Examiner link" href="https://www.irishexaminer.com/breakingnews/ireland/private-funding-could-provide-dublin-with-new-metro-by-2025-says-dublin-metro-chief-889462.html" class="indep"><img src="./images/icons/logo-3.png" alt="Irish Examiner logo"></a>
-    </section>
-
-    <section class="box-features" id="features">
-        <div class="features-row">
-            <section id="faqs">
-                <span class="icon major fa-bolt accent2"></span>
-                <h3>FAQs</h3>
-                <p>Your most popular and latest questions on the project answered.<br>
-                    With topics ranging from Politcal considerations, planning, Local Authority Interactions</p>
-
-                <ul class="hidden collapsed">
-                    <li>
-                        <h4 class="question">How does Metro Dublin align with Government Policy?</h4>
-                        <p class="answer">Government Policy on urban development states that urban areas should be provided with high quality public transport, and that this Policy is compromised when it is not economically feasible to provide such support. </p>
-                    </li>
-                    <li>
-                        <h4 class="question">National Transport Authority Strategy</h4>
-                        <p class="answer">The Minister for Transport sets Transport Strategy. In 2015, the Minister, referring to Metro Dublin, stated that:
-                            “if we could build an underground system in Dublin for significantly less than the Metro North/DART Underground proposals, in a much quicker timeframe and without needing significant subvention, then I'd support it unequivocally. As I am sure Dublin City Council’s members would as well.”
-                            Since the Minister sets the NTA Strategy, Metro Dublin can be seen to be in accord with the NTA’s Strategy. </p>
-                    </li>
-                    <li>
-                        <h4 class="question">Oireachtas </h4>
-                        <p class="answer">TA report to the Oireachtas Joint Committee on Transport in 2014 stated that Metro Dublin has ‘‘knowledge and many skills that are appropriate for the building of a Metro,’’ and that its ‘‘knowledge could be harnessed for the development of the Dublin Metro system.’ </p>
-                    </li>
-                    <li>
-                        <h4 class="question">Dublin City Council Strategic Policy Committees:- </h4>
-                        <p class="answer">- For Planning ?<br>
-                            Stated that they ‘‘would like to see the City Council explore the potential for cooperation between Metro Dublin and Dublin City Council to secure the potential benefits of Metro Dublin for the City.”
-                            - For Transport & Traffic?<br>
-                            Stated that “the Minister undertakes sub-stantive engagement’’ with Metro Dublin.” </p>
-                    </li>
-                    <li>
-                        <h4 class="question">How does Metro Dublin fit in with current transport plans?</h4>
-                        <p class="answer">Metro Dublin reinterprets the business cases for the DART Underground and for the Bus Rapid Transit schemes.
-                            It also upgrades the Metro North proposal to a full metro and will be completed much sooner.
-                            Metro Dublin serves vast additional areas, and patronage is significantly increased. Its six lines will complement the six existing rail lines (four DART/Commuter/Intercity and two Luas). </p>
-                    </li>
-                    <li>
-                        <h4 class="question">What is the context of the Development?</h4>
-                        <p class="answer">The Metro Dublin Development is within:
-                            - The Irish Government and EU Policies and Strategies that facilitate private sector proposals to address the deficit in sustainable public transport in an open transparent and value for money competitive manner that is open to scrutiny, debate and constructive criticism.
-                            For instance, the EU tender process will be used for Metro Dublin contracts to exploit its unique innovative methods, which will reduce costs and add additional operational benefits that are in the public interest.
-                            The Railway and Strategic Infrastructure Acts and Regulations facilitate ‘any person’ to make an application for a Railway Order to An Bord Pleanála and to operate a railway as regulated by the Commission for Railway Regulation. </p>
-                    </li>
-                    <li>
-                        <h4 class="question">What are the advantages of Local Authority involvement?</h4>
-                        <p class="answer">An extensive and affordable metro can be in operation in 2023/24 (as against a single metro line in 2027), which can be seen to have a profoundly positive impact on the proper planning and sustainable development of Dublin and a positive impact on Ireland as a whole. </p>
-                    </li>
-                    <li>
-                        <h4 class="question">Who will own the land?</h4>
-                        <p class="answer">All land associated with the Development will be in the ownership/control of the State. Land ‘way-leaves’ will be put in place to enable construction and maintenance works and to maintain and upkeep access to stations. </p>
-                    </li>
-                    <li>
-                        <h4 class="question">Why are the Irish Rail Adamstown and Blanchardstown lines included?</h4>
-                        <p class="answer">To underpin high usage of public transport, Metro Dublin needs a ‘critical-mass of public transport infrastructure.’ This will facilitate Irish Rail to run high frequency/quality services on these and other Metro Dublin lines.</p>
-                    </li>
-                    <li>
-                        <h4 class="question">Has the Statutory Process started?</h4>
-                        <p class="answer">Under the Strategic Infrastructure Act, Metro Dublin has begun statutory Pre-Application Consultation for a Railway Order with An Bord Pleanála.</p>
-                    </li>
-                    <li>
-                        <h4 class="question">Are there conflicts with the existing intercity rail services?</h4>
-                        <p class="answer">No. Metro Dublin track layout is such that its services are run on tracks grade-separated (bridged-over) from the Irish Rail intercity trains.</p>
-                    </li>
-                    <li>
-                        <h4 class="question">What is the Metro Dublin Development?</h4>
-                        <p class="answer">MD is a world-class integrated public transport development that serves both Dublin and the rest of Ireland and addresses many of the requirements for proper planning and sustainable development in Dublin.
-                            Works involve the upgrade of existing lines (29 km) and new lines (18 km on surface and 46 km in tunnel). It has 62 station stops at 53 station locations (due to the existence of connection stations linking two or more lines). The Development consists of 6 Metro Line Sections. Of these 53 stations locations, 10 are new surface, 13 are upgrades to existing surface and 30 are underground (some of which serve more than one line).</p>
-                    </li>
-                    <li>
-                        <h4 class="question">What are the benefits of the Metro Dublin Development</h4>
-                        <p class="answer">MD delivers on the long-accepted social, economic and environmental case for a metro in Dublin. Major benefits include:
-                            Quality of life improvements and the ability to enhance Dublin as a residential and investment location;
-                            An affordable world-class public transport system that integrates with and enhances the viability of existing public transport services.</p>
-                    </li>
-                    <li>
-                        <h4 class="question">How can the Local Authorities get involved?</h4>
-                        <p class="answer">Local Authorities can get involved through the State Authorities (Public Private Partnership Arrangements) Act 2002.
-                            The Act provides certainty as to the powers of Irish State authorities to enter partnerships and gives local authorities the power to enter into joint ventures. It strikes a balance between the needs and interests of the public sector, and ultimately those of the Exchequer, and the private sector (source: The Department of Public Expenditure and Reform).</p>
-                    </li>
-                    <li>
-                        <h4 class="question">Does Metro Dublin expect involvement from Dublin Local Authorities?</h4>
-                        <p class="answer">Yes (just as city authorities world-wide are part and parcel of their public transport delivery) and is now exploring the scope for partnership collaboration and/or co-operation to secure potential benefits as anticipated through the Dublin City Council Motion mentioned earlier.</p>
-                    </li>
-                    <li>
-                        <h4 class="question">Has Metro Dublin lined up the team and finance to deliver?</h4>
-                        <p class="answer">Metro Dublin’s capability and credibility to complete the proposed development is fully supported by its core development team, financiers and track record.<br><br>
-                            The Metro Dublin financial team has the ability to provide the finance for the development, and the Metro Dublin track record includes the bona fide development proposal which it developed with a Japanese consortium and presented to the Taoiseach and his Cabinet Committee on Infrastructure and Public Private Partnerships. <br><br>The Japanese consortium went on to build the Dublin Port Tunnel.
-                            The Metro Dublin core development team met with the An Bord Pleanála Pre-Application Consultations Board in 2015. <br><br>The core development team members are world leaders in terms of fast metro delivery, and low outcome/final all-in cost and quality. They have delivered extensive high quality metro projects like the Metro Dublin Development many times. They participated in the management team of the Madrid Regional Government in all phases of implementation of its new metro infrastructure, from its initial conception to commissioning to commercial operation.
-                            The core team will take the Metro Dublin Development through its delivery – from the start of its development and due process to procurement to contract to commissioning. Its members ability, experience and delivery record fit the Metro Dublin development needs – to do everything through EU procurement methods, to procure fast, appoint contractors, and supervise delivery and commissioning of the full development</p>
-                    </li>
-                    <li>
-                        <h4 class="question">What would be the burdens on public bodies?</h4>
-                        <p class="answer">At this stage, it suffices to say here that Metro Dublin sees that its Development and operation will at all times accrue net income for the Exchequer and the Local Authorities.</p>
-                    </li>
-                    <li>
-                </ul>
-
-                <ul class="actions faq">
-                    <li class="grey-out collapse-but"><a href="#" class="button grey-out">Learn More</a></li>
-                </ul>
-
-            </section>
-            <section id="purpose">
-                <span class="icon major fa-area-chart accent3"></span>
-                <h3>Purpose</h3>
-                <p>The purpose of the Metro Dublin project is to provide a substantial improvement in public transport in the Greater Dublin Area..</p>
-                <p class="hidden collapsed">by integrating and augmenting the existing heavy rail lines in Dublin city centre and thereby increasing passenger capacity, train frequency and interchange opportunities. The Metro Dublin project will also constitute the cornerstone of the future transport system for the Greater Dublin Area through integration with other modes of transport, alleviating congestion in the Greater Dublin Area and enabling a modal shift from private to public transport.</p>
-                <ul class="actions">
-                    <li class="grey-out collapse-but"><a href="#" class="button grey-out">Read More</a></li>
-                </ul>
-
-            </section>
-        </div>
-        <div class="features-row">
-            <section id="geographical">
-                <span class="icon major fa-cloud accent4"></span>
-                <h3>Geographic Extent</h3>
-                <p>Metro Dublin will serve the capital and the country with a world-class integrated public transport system that will complement the existing DART and LUAS lines. </p>
-                <p class="hidden collapsed">The extension provides an additional 62 station stops at 53 station locations. The expansion works include 18 km of new surface lines and 46 km of tunnels and involves upgrading 29 km of existing lines – 93 km in total (operational length is shorter). All lines run on the Irish Rail gauge and are separate from the Irish Rail intercity tracks.
-                    <br><br>
-                    Metro Dublin will integrate existing public transport services and directly serve many of Dublin’s major traffic generators, such as: Dublin Airport, St James’s Hospital (including the planned new children’s hospital), Beaumont Hospital, Croke Park, Dublin City University and Dublin Institute of Technology.<br><br> It links Dublin city centre with the suburbs of: Adamstown, Ashbourne, Ballymun, Blanchardstown, Castleknock, Clondalkin, Finglas, Greencastle, Harold’s Cross, Howth Junction/Donaghmede, Malahide, Swords, Terenure, Rathfarnham and Whitehall, and connects all the foregoing with both the national rail and bus networks.</p>
-                <ul class="actions">
-                    <li class="grey-out collapse-but"><a href="#" class="button grey-out">Read More</a></li>
-                </ul>
-
-            </section>
-            <section id="design">
-                <span class="icon major fa-lock accent5"></span>
-                <h3>Design and Delivery</h3>
-                <p>The Metro Dublin Consortium (MDC) will oversee the delivery of the project. A Special Purpose Vehicle (SPV) will be established to ensure timely and efficient construction of the agreed scheme. </p>
-                <p class="hidden collapsed">Major works are expected to commence in 2019, subject to planning approvals, and to be completed by end 2025. The MDC and its SPV will work closely with the relevant state sector agencies to apply global best practice and experience to the construction and delivery of the project, and achieve optimal outcomes for the community.</p>
-
-                <ul class="actions">
-                    <li class="grey-out collapse-but"><a href="#" class="button grey-out">Read More</a></li>
-                </ul>
-
-            </section>
-        </div>
-    </section>
-
-    <section id="network">
-        <h4>Map Zoom</h4>
-        <input type="range" id="net-zoom" class="range-zoom" min="1" max="10" value="5">
-        <div class="network-inner" id="network-inner">
-            <div class="network-inner-container">
-                <div class="feature-image one"><img src="/images/maps/metro-network.png" alt="metro network map"></div>
-                <div class="feature-image two"><img src="/images/maps/map-network.png" alt="metro network integrated map"></div>
-            </div>
-        </div>
-        <span id="network-footer">
-                <h3>City Connectivity</h3>
-                <p>Toggle the two maps using the buttons below, to see the Integrated Nework locations.</p>
-                <ul class="actions">
-                  <li ><div class="button white-out">Network Connectivity</div></li>
-                  <li class="full"><div class="button">Integrated Network</div></li>
-                </ul>
-            </span>
-    </section>
-
-    <section id="maps">
-        <div class="feature-row map">
-            <div class="feature-image one"><img src="/images/maps/dev-map.png" alt="metro line map"></div>
-            <div class="feature-image two"><img src="/images/maps/map.png" alt="metro line map"></div>
-            <h3>Map Overview</h3>
-            <p>Connecting Dublin City</p>
-            <ul class="actions">
-                <li ><a href="#" id="mapOverview" class="button white-out">Enlarge</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="subscribe">
-        <h2 id="subscribe-info">Subscribe for more information</h2>
-        <p>We will keep you up to date with all of the latest news on Metro Dublin.</p>
-        <form onsubmit="return false">
-            <div class="email">
-                <div class="container">
-                    <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-                    <!-- <input type="email" id="email-input" name="email" id="email" placeholder="Email Address"> -->
-                </div>
-                <div class="container">
-                    <!-- <button id="submit-email" class="submit" class="fit">Sign Up</button> -->
-                    <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">SUBSCRIBE</button>
-                    <button class="hidden" id="user-delete">UNSUBSCRIBE</button>
-                </div>
-            </div>
-        </form>
-    </section>
-</main>
-
-
-
-
-
-
-<!-- -============================================================- -->
 <footer>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <header>
-        <!-- <a href="#" class="fa fa-facebook"></a> -->
-        <a href="https://twitter.com/MetroForDublin" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-    </header>
-    <div class="middle">
-        <img class="metro-logo" src="./images/icons/MDlog.png" alt="metro logo">
-        <p>Metro Dublin</p>
-        <p>Block 3</p>
-        <p>104 Parkgate Place</p>
-        <p>Parkgate Street</p>
-        <p>Dublin 8, D08 KX30</p>
-        <p><b><i>info@MetroDublin.ie</i></b></p>
-        <a href="https://gravidade.pt/en/" rel="noreferrer" target="_blank" class="video-link-mobile">Title video courtesy of Gravidade Engineering</a>
-        <img class="des-logo" src="./images/icons/GT.png" alt="design logo">
-        <a href="/privacy" class="privacy-link">Privacy Policy</a>
+    <div class="contact">
+        <b>Contact</b>
+        <p>Address 1.</p>
+        <p>Street 2</p>
+        <p>City, Country</p>
     </div>
-    <div class="bottom">&copy; Metro Dublin 2019</div>
+    <div class="number">
+        <p class="tel"><a href="">+35 1 671 8806</a></p>
+        <p class="email"><a href=""> info@lebanesefruits.com</a></p>
+    </div>
+    <div class="follow">
+        <b>Follow Us</b>
+
+        <a href="">Facebook</a>
+        <a href="">Twitter</a>
+        <a href="">Linkedin</a>
+
+
+    </div>
 
 </footer>
-
-<!-- -============================================================- -->
-
-<aside class="mobile-top-nav" id="mobile-nav">
-    <ul>
-        <li><a href="#menu">Home</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-        <li><a href="#purpose">Purpose</a></li>
-        <li><a href="#geographical">Geographic Extent</a></li>
-        <li><a href="#design">Design & Delivery</a></li>
-        <li><a href="#network">Connectivity</a></li>
-        <li><a href="#maps">Map Overview</a></li>
-        <li><a href="#subscribe">Subscribe</a></li>
-        <li><a href="./privacy">Privacy</a></li>
-    </ul>
-    <div class="info"><i>info@metrodublin.ie</i></div>
-
-</aside>
-
-<!-- -============================================================- -->
-
-
+<script defer src="/scripts/IntersectionObserver.js"></script>
+<aside id=""></aside>
 </body>
 </html>
